@@ -7,7 +7,7 @@ def _odd_iter():
 def _not_divisible(n):
     return lambda x: x % n > 0
 
-
+print("#####")
 def primes():
     yield 2
     it = _odd_iter() # 初始序列
