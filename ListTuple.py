@@ -2,32 +2,32 @@ classmates = ['Michael', 'Bob', 'Tracy']
 # list 可以修改
 print(classmates)
 
-print( classmates[-1])
-print( classmates[0])
+print(classmates[-1])
+print(classmates[0])
 
 classmates.append("Adam")
-classmates.insert(-1,"Jack")
+classmates.insert(-1, "Jack")
 classmates.pop(-1)
 
 classmates[-1] = "Sarah"
 print(classmates)
 
-L = ["Apple",123,True]
+L = ["Apple", 123, True]
 s = ['python', 'java', ['asp', 'php'], 'scheme']
 
 print(s[2][1])
 
-#tuple不能修改
-t= (1,2)
+# tuple不能修改
+t = (1, 2)
 print(t)
 
-t=(1,)
+t = (1,)
 print(t)
 
-t =("a", "b",["A","B"])
+t = ("a", "b", ["A", "B"])
 t[2][0] = "X"
 t[2][1] = "Y"
-print(t )
+print(t)
 
 L = [
     ['Apple', 'Google', 'Microsoft'],
@@ -39,20 +39,25 @@ print(L[0][0])
 print(L[1][1])
 print(L[2][2])
 
-if L:  #只要L是非零数值、非空字符串、非空list等，就判断为True，否则为False
+if L:  # 只要L是非零数值、非空字符串、非空list等，就判断为True，否则为False
     print(L)
 
-height = input("input height:\n")
-weight = input("input weight:\n")
-bmi = round( int(weight)/int(height)*int(height) ,2)
-if bmi<18.5:
+height = input("input height(m):\n")
+weight = input("input weight(kg):\n")
+bmi = round(float(weight) / (float(height) * float(height)), 2) # 运算有先后顺序 须加括号
+if bmi < 18.5:
     print("thin")
-elif bmi<25:
-    print ("normal")
-elif bmi<28:
+elif bmi < 25:
+    print("normal")
+elif bmi < 28:
     print("fat")
-elif bmi<32:
+elif bmi < 32:
     print("too fat")
 else:
     print("unknow")
-print("bmi = %.2f %% " % bmi)
+h = float(height)
+w = float(weight)
+b = w / (h * h)
+print(b)
+print(float(weight) / float(height) * float(height) ) # 运算有先后顺序 须加括号
+print("your bmi = %.2f %% " % bmi)
